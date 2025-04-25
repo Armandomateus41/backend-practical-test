@@ -1,0 +1,37 @@
+POST http://localhost:5275/api/transactions
+Content-Type: application/json
+
+{
+  "TransactionCurrencyCode": "BRL",
+  "LocalHour": "2025-04-24T10:30:00",
+  "TransactionScenario": "purchase",
+  "TransactionType": "credit",
+  "TransactionIPaddress": "192.168.0.1",
+  "IpState": "SP",
+  "IpPostalCode": "01000-000",
+  "IpCountry": "BR",
+  "BrowserLanguage": "pt-BR",
+  "PaymentInstrumentType": "card",
+  "CardType": "visa",
+  "PaymentBillingPostalCode": "01000-000",
+  "PaymentBillingState": "SP",
+  "PaymentBillingCountryCode": "BR",
+  "ShippingPostalCode": "01000-000",
+  "ShippingState": "SP",
+  "ShippingCountry": "BR",
+  "CvvVerifyResult": "match"
+  "CardHolderName": "Armando Mateus",
+  "CardNumber": "4111111111111111",
+  "CardExpirationMonth": "12",
+  "CardExpirationYear": "2025",
+  "CardSecurityCode": "123"
+  "OrderAmount": 100.00,
+  "OrderCurrencyCode": "BRL",
+  "OrderItems": 
+    {
+      "ItemDescription": "Product 1",
+      "ItemQuantity": 1,
+      "ItemPrice": 50.00
+      "ItemCurrencyCode": "BRL",
+      "ItemTotalAmount": 50.00,
+}

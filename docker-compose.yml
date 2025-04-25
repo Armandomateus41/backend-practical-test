@@ -1,0 +1,27 @@
+services:
+  oracle-db:
+    image: container-registry.oracle.com/database/free:23.3.0.0
+    container_name: oracle_picpay
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_PWD=123456
+      - ORACLE_ALLOW_REMOTE=true
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+    restart: always
+
+  backend-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend_practical_test
+    ports:
+      - "5275:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - oracle-db
+
+volumes:
+  oracle-data:
